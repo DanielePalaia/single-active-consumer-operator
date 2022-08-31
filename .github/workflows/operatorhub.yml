@@ -66,7 +66,7 @@ jobs:
           cd community-operators-prod/operators/rabbitmq-single-active-consumer-operator
           git branch rabbitmq-single-active-consumer-${{ env.RELEASE_VERSION }}
           git checkout rabbitmq-single-active-consumer-${{ env.RELEASE_VERSION }}
-          cp -fR /home/runner/work/single-active-consumer-operator/single-active-consumer-operator/OLM-Package-Repo/OLM2/rabbitmq-single-active-consumer-operator/${{ env.RELEASE_VERSION }} .
+          cp -fR /home/runner/work/single-active-consumer-operator/single-active-consumer-operator/OLM-Package-Repo/OLM2/rabbitmq-single-active-consumer-operator-openshift/${{ env.RELEASE_VERSION }} .
           git add .
           git commit -s -m "RabbitMQ single active consumer new release"
           git push https://DanielePalaia:"$TOKEN"@github.com/rabbitmq/community-operators-prod
