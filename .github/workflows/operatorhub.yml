@@ -36,7 +36,7 @@ jobs:
           git clone https://github.com/rabbitmq/OLM-Package-Repo
           wget https://github.com/rabbitmq/single-active-consumer-operator/releases/latest/download/single-active-consumer-operator-with-certmanager.yaml
           cp ./single-active-consumer-operator-with-certmanager.yaml ./OLM-Package-Repo/generate_OLM/generate_OLM_single_active_consumer_operator/manifests_crds/
-          cp ./config/crd/bases/*.yaml ./OLM-Package-Repo/generate_OLM/generate_OLM/generate_OLM_single_active_consumer_operator/manifests_crds/crds
+          cp ./config/crd/bases/*.yaml ./OLM-Package-Repo/generate_OLM/generate_OLM_single_active_consumer_operator/manifests_crds/crds
           cd ./OLM-Package-Repo/generate_OLM/generate_OLM/generate_OLM_single_active_consumer_operator/
           python3 generate-olm-package.py ./manifests_crds/single-active-consumer-operator-with-certmanager.yaml ${{ env.RELEASE_VERSION }} ./../../OLM2/rabbitmq-single-active-consumer-operator
           cp ./generators/cluster-service-version-generator-openshift.yml ./generators/cluster-service-version-generator.yml
